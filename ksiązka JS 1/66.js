@@ -8,9 +8,10 @@ function Punkt (x, y){
 		return str;
 	}
 }
-var punkty = new Punkt (1, 2);
+var punkty = [];
 document.write("Zawartość tablicy punkty: <br />");
 for(var i = 0;  i < 10; i++){
+	punkty[i] = new Punkt (i, i+1);
 	document.write("punkty [" + i +"] : " + punkty[i].getXYAsStr());
 	document.write("<br />");
 }
