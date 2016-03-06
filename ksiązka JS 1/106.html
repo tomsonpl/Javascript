@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Czas na stronie</title>
+</head>
+<body>
+<div id="infoDiv">
+</div>
+<div id = "warstwaDanych">
+	<p id="pt1"> Treść aapitu tekstowego.</p>
+</div>
+<script>
+var div = document.getElementById("warstwaDanych");
+var infoDiv = document.getElementById("infoDiv");
+var str = "" ;
+for(var i = 0; i < div.childNodes.length; i++){
+str += "węzeł nr <b>" + i + "</b> (";
+str += "typ: <b>" + div.childNodes[i].nodeType + "</b>";
+str += ", nazwa:<b>" + div.childNodes[i].nodeName + "</b>)<br>";
+}
+infoDiv.innerHTML = str;
+</body>
+</html>

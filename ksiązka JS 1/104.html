@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Czas na stronie</title>
+<script type = "text/javascript">
+function zmienAtrybuty(){
+	var img = document.getElementById('okladka1');
+	var infoDiv = document.getElementById("infoDiv");
+	var str = "Bieżąca wartość atrybutu alt (" ;
+	str += img.getAttribute("alt") + ") została zmieniona na \"";
+
+	img.setAttribute("alt","Okłądka ksiązki Dynamiczny HTML. 101 praktycznych skryptow");
+	img.setAttribute("title", "To jest tytuł obrazu");
+
+	str+= img.getAttribute("alt") + "\". Dodany został także ";
+	str+= "atrybut title o wartości \"" + img.getAttribute("title");
+
+	infoDiv.inerHTML=str;
+}
+</script>
+</head>
+<body>
+	<div id="infoDiv"></div>
+	<img id="okladka1" src= "obraz.jpg" alt="tekstowy odpowiednik obrazu">
+	<script type="text/javascript">
+		zmienAtrybuty();
+	</script>
+</body>
+</html>

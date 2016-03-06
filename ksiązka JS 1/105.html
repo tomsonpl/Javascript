@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Czas na stronie</title>
+<script type = "text/javascript">
+	function zmienStyl(){
+		var akapit = document.getElementById("akapitTekstowy");
+		if(akapit.style.fontWeight == "normal"){
+			akapit.style.fontWeight = "bold";
+		} else {
+			akapit.style.fontWeight = "normal";
+		}
+	}
+	setInterval("zmienStyl();", 2000);
+</script>
+</head>
+<body>
+<p id= "akapitTekstowy" style="font-weight:normal">
+	TO jest akapit tekstowy.
+</p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Czas na stronie</title>
+<script type = "text/javascript">
+
+
+function aktualnyCzas(target){
+	var timerId= setInterval("zmienStatus()", 1000);
+	function zmienStatus(){
+  var data = new Date();
+  var godziny = data.getHours();
+  var minuty = data.getMinutes();
+  var sekundy = data.getSeconds();
+  var czas = godziny;
+  czas += ((minuty <10) ? " :0" : ":") + minuty;
+  czas += ((sekundy <10) ? " :0" : ":") + sekundy;
+		}
+		var div = document.getElementById(target);
+		if(div){
+			div.innerHTML = czas;
+		}
+		setTimeout("aktualnyCzas('"+target+"')", 1000);
+}
+</script>
+</head>
+
+<body>
+<div id="czasDiv">
+	00:00:00
+</div>
+<script type="text/javascript">
+aktualnyCzas("czasDiv");
+</script>
+</body>
+</html>
